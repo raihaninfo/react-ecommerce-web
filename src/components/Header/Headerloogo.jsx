@@ -3,7 +3,7 @@ import React from 'react';
 const Headerloogo = () => {
     return (
         <div className='text-center'>
-            <p>logo</p>
+            <p>Site Logo</p>
         </div>
     );
 };
