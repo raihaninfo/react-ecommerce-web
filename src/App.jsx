@@ -1,11 +1,11 @@
 import "./App.css";
-import Headerloogo from "./components/Header/Headerloogo";
+import Header from "./components/Header/Header";
 
 
 function App() {
   return (
     <div>
-      <Headerloogo></Headerloogo>
+      <Header></Header>
     </div>
   );
 }
