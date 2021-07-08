@@ -1,0 +1,14 @@
+.card-btn{
+    display: block;
+    
+    background-color: rgb(216 149 11 / 61%);
+    color: black;
+    margin-top: 15px;
+    font-weight: bolder;
+}
+.product-row{
+    margin-right: 5px;
+}
+.text-left{
+    text-align: left;
+}
