@@ -1,6 +1,6 @@
 import React from "react";
 
-const Ordersummary = () => {
+const OrderSummary = () => {
   return (
     <div>
       <div className="card">
@@ -37,4 +37,4 @@ const Ordersummary = () => {
   );
 };
 
-export default Ordersummary;
+export default OrderSummary;
