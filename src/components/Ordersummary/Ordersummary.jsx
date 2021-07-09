@@ -1,12 +1,14 @@
 import React from "react";
+import "./Ordersummary.css";
 
-const OrderSummary = () => {
+const OrderSummary = (props) => {
+  console.log(props);
   return (
     <div>
       <div className="card">
         <div className="card-header card-title text-center">Order Summary</div>
         <div className="card-body">
-          <p className="text-center">items ordered 2</p>
+          <p className="text-center">items ordered {props.card.length} </p>
           <div className="row border-bottom">
             <div className="col-8">items</div>
             <div className="col-4 text-end">1</div>
@@ -23,15 +25,14 @@ const OrderSummary = () => {
             <div className="col-8">Estmated tax</div>
             <div className="col-4 text-end">$ 5.21</div>
           </div>
-          <div className="row">
+          <div className="row total">
             <div className="col-8">Total</div>
             <div className="col-4 text-end">$ 5.21</div>
           </div>
-
         </div>
-        <a href="/" className="btn btn-warning">
-            Review your order
-          </a>
+        <a href="/" className="btn btn-order">
+          Review your order
+        </a>
       </div>
     </div>
   );

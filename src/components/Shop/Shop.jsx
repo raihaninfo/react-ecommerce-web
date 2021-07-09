@@ -5,26 +5,30 @@ import ProductList from "../Product/ProductList";
 import "../Shop/Shop.css";
 
 const Shop = () => {
-  console.log(fakeData);
   const first10 = fakeData.slice(0, 10);
   const [products, setProduct] = useState(first10);
+  const [card, setCard] = useState([]);
+
+  const handleAddProduct = (products) => {
+    console.log("Product added", products);
+    const newCart = [...card, products]
+    setCard(newCart)
+  };
 
   return (
     <div className="row">
       <div className="offset-md-1 col-md-9 border-right">
         {products.map((products) => (
           <ProductList
-            image={products.img}
-            name={products.name}
-            productBy={products.seller}
-            price={products.price}
-            stock={products.stock}
+            handleAddProduct={handleAddProduct}
+            products={products}
+            key={products.key}
           ></ProductList>
         ))}
       </div>
 
       <div className="col-md-2">
-          <OrderSummary></OrderSummary>
+        <OrderSummary setCard={setCard} card={card}></OrderSummary>
       </div>
     </div>
   );
