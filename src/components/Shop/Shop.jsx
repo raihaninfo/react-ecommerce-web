@@ -10,9 +10,8 @@ const Shop = () => {
   const [card, setCard] = useState([]);
 
   const handleAddProduct = (products) => {
-    console.log("Product added", products);
-    const newCart = [...card, products]
-    setCard(newCart)
+    const newCart = [...card, products];
+    setCard(newCart);
   };
 
   return (
@@ -28,7 +27,7 @@ const Shop = () => {
       </div>
 
       <div className="col-md-2">
-        <OrderSummary setCard={setCard} card={card}></OrderSummary>
+        <OrderSummary card={card}></OrderSummary>
       </div>
     </div>
   );
