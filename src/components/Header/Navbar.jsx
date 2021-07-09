@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "../../images/logo.png"
 
 const Navbar = () => {
   return (
@@ -6,7 +7,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            Navbar
+            <img className='logo-img' src={Logo} alt="" />
           </a>
           <button
             className="navbar-toggler"
