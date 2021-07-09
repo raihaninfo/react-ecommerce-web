@@ -24,7 +24,7 @@ const Shop = () => {
       </div>
 
       <div className="col-md-2">
-          <OrderSummary></OrderSummary>
+        <OrderSummary></OrderSummary>
       </div>
     </div>
   );
