@@ -1,13 +1,14 @@
 import React from "react";
 import "./Ordersummary.css";
 
-const OrderSummary = () => {
+const OrderSummary = (props) => {
+  console.log(props);
   return (
     <div>
       <div className="card">
         <div className="card-header card-title text-center">Order Summary</div>
         <div className="card-body">
-          <p className="text-center">items ordered 2</p>
+          <p className="text-center">items ordered {props.card.length} </p>
           <div className="row border-bottom">
             <div className="col-8">items</div>
             <div className="col-4 text-end">1</div>
