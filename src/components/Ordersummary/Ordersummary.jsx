@@ -17,8 +17,13 @@ const OrderSummary = (props) => {
     shipping = 6.99;
   }
 
-  const tax = (totalPrice / 10).toFixed(2);
-  const grandTotal = (totalPrice + Number(tax) + shipping).toFixed(2);
+  const tax = totalPrice / 10;
+  const grandTotal = totalPrice + Number(tax) + shipping;
+
+  const formatNumber = (num) => {
+    const precision = num.toFixed(2);
+    return Number(precision);
+  };
 
   return (
     <div>
@@ -31,17 +36,21 @@ const OrderSummary = (props) => {
             <div className="col-4 text-end">{card.length}</div>
           </div>
           <div className="row border-bottom">
+            <div className="col-7">Product Price</div>
+            <div className="col-5 text-end">$ {formatNumber(totalPrice)}</div>
+          </div>
+          <div className="row border-bottom">
             <div className="col-8">Shipping</div>
             <div className="col-4 text-end">$ {shipping}</div>
           </div>
           <div className="row border-bottom">
             <div className="col-5">Tax + Vat</div>
-            <div className="col-7 text-end">$ {Number(tax)}</div>
+            <div className="col-7 text-end">$ {formatNumber(tax)}</div>
           </div>
 
           <div className="row total">
             <div className="col-4">Total</div>
-            <div className="col-8 text-end">$ {Number(grandTotal)}</div>
+            <div className="col-8 text-end">$ {formatNumber(grandTotal)}</div>
           </div>
         </div>
         <a href="/" className="btn btn-order">
