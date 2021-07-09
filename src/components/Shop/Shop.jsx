@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import fakeData from "../../fakeData";
+import OrderSummary from "../OrderSummary/OrderSummary";
 import ProductList from "../Product/ProductList";
 import "../Shop/Shop.css";
 
@@ -22,7 +23,9 @@ const Shop = () => {
         ))}
       </div>
 
-      <div className="col-md-2">right</div>
+      <div className="col-md-2">
+          <OrderSummary></OrderSummary>
+      </div>
     </div>
   );
 };
