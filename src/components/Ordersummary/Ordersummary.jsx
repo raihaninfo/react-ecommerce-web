@@ -1,4 +1,5 @@
 import React from "react";
+import './Ordersummary.css'
 
 const OrderSummary = () => {
   return (
@@ -23,13 +24,13 @@ const OrderSummary = () => {
             <div className="col-8">Estmated tax</div>
             <div className="col-4 text-end">$ 5.21</div>
           </div>
-          <div className="row">
+          <div className="row total">
             <div className="col-8">Total</div>
             <div className="col-4 text-end">$ 5.21</div>
           </div>
 
         </div>
-        <a href="/" className="btn btn-warning">
+        <a href="/" className="btn btn-order">
             Review your order
           </a>
       </div>
